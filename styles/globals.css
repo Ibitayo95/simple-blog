@@ -7,12 +7,21 @@ body {
 }
 
 a {
-  color: inherit;
+  color:mediumpurple;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 @media (prefers-color-scheme: dark) {
