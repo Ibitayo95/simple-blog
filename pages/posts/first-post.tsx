@@ -8,12 +8,9 @@ export default function FirstPost() {
         <Layout>
             <div>
                 <Head>
-                    <title>First post!</title>
+                    <title>Who is ibi</title>
                 </Head>{" "}
-                <h1>First Post</h1>
-                <h2>
-                    <Link href="/">Back to home</Link>
-                </h2>
+                <h1>Ibitayo</h1>
             </div>
         </Layout>
     );
