@@ -1,7 +1,7 @@
 ---
 title: "Understanding GPT-3"
 date: "2022-11-06"
-tag: "Artificial Intelligence"
+tag: "Artificial-Intelligence"
 ---
 
 Recently, I harnessed GPT-3 whilst developing a demo of an app that provides useful drug information to a users. It was a fantastic opportunity to learn more about GPT-3 and catch a glimpse of the road our technology might be heading. But firstly, in this post I want to explore what GPT-3 actually is and how it 'knows' what it knows.

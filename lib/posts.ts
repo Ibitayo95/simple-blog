@@ -45,6 +45,25 @@ export function getAllPostIds() {
     });
 }
 
+export function getAllTags() {
+    const fileNames = fs.readdirSync(postsDirectory);
+    const tagSet = new Set<string>();
+    const uniqueTags: {}[] = [];
+
+    fileNames.map((file) => {
+        const fullPath: string = path.join(postsDirectory, file);
+        const fileContents: string = fs.readFileSync(fullPath, "utf-8");
+        const matterResult = matter(fileContents);
+        const tag = matterResult.data.tag;
+        if (!tagSet.has(tag)) {
+            tagSet.add(tag);
+            uniqueTags.push({ tag: tag });
+        }
+    });
+
+    return uniqueTags;
+}
+
 export async function getPostData(id: string) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf-8");

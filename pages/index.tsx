@@ -2,18 +2,26 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData, getAllTags } from "../lib/posts";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
+    const allTags = getAllTags();
     return {
         props: {
             allPostsData,
+            allTags,
         },
     };
 }
 
-export default function Home({ allPostsData }: { allPostsData: any }) {
+export default function Home({
+    allPostsData,
+    allTags,
+}: {
+    allPostsData: any;
+    allTags: any;
+}) {
     return (
         <Layout home>
             <Head>
@@ -25,6 +33,18 @@ export default function Home({ allPostsData }: { allPostsData: any }) {
                     written in plain english.
                 </p>
                 <Link href="/posts/first-post">Read about me...</Link>
+            </section>
+            <section>
+                <hr />
+                {allTags.map(({ tag }: { tag: string }) => {
+                    return (
+                        <div key={tag}>
+                            <Link href={`/tags/${tag}`}>{tag}</Link>
+                            {/* change CSS */}
+                        </div>
+                    );
+                })}
+                <hr />
             </section>
             <section
                 className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}

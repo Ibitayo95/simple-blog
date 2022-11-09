@@ -1,7 +1,7 @@
 ---
 title: "What is a transformer?"
 date: "2022-11-07"
-tag: "Artificial Intelligence"
+tag: "Artificial-Intelligence"
 ---
 
 Other than sounding like an alien robot, it is actually quite interesting how tranformer neural networks have taken the AI universe by storm in the past couple of years. After finding out that GPT-3's model was based on this architecture, I wanted to do a little bit more digging.
