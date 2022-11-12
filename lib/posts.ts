@@ -22,7 +22,6 @@ export function getSortedPostsData() {
             tag: matterResult.data.tag,
         };
     });
-
     return allPostsData.sort(({ date: a }, { date: b }) => {
         if (a < b) {
             return 1;

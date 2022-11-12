@@ -17,13 +17,14 @@
   .headingLg {
     font-size: 1.5rem;
     line-height: 1.4;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
   }
   
   .headingMd {
     font-size: 1.2rem;
     line-height: 1.5;
   }
+  
   
   .borderCircle {
     border-radius: 9999px;
@@ -44,9 +45,15 @@
   }
   
   .listItem {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1.5rem;
+    font-size: 1.1rem;
   }
   
   .lightText {
     color: #666;
+  }
+
+  .tags {
+    display: inline;
+    margin-right: 2rem;
   }
