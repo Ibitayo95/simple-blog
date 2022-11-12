@@ -47,7 +47,7 @@ export function getAllPostIds() {
 export function getAllTags() {
     const fileNames = fs.readdirSync(postsDirectory);
     const tagSet = new Set<string>();
-    const uniqueTags: {}[] = [];
+    const uniqueTags: { tag: string }[] = [];
 
     fileNames.map((file) => {
         const fullPath: string = path.join(postsDirectory, file);

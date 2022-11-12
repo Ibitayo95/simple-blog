@@ -6,7 +6,7 @@ import { getAllTags, getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
 
 export async function getStaticPaths() {
-    const paths = getAllTags().map((tagType) => {
+    const paths = getAllTags().map((tagType: { tag: string }) => {
         return {
             params: {
                 tag: tagType.tag,
